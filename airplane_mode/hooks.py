@@ -199,3 +199,12 @@ app_license = "MIT"
 # auth_hooks = [
 #	"airplane_mode.auth.validate"
 # ]
+
+
+
+fixtures = [
+       {
+         "dt": "Web Page", 
+         "filters":[["name", "in", ['my-profile']]]
+      },
+]

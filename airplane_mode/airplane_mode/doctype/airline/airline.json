@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:name1",
  "creation": "2023-06-15 20:09:00.269542",
@@ -48,7 +49,7 @@
    "link_fieldname": "Name"
   }
  ],
- "modified": "2023-06-16 15:09:47.075312",
+ "modified": "2023-06-16 17:10:45.442784",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
