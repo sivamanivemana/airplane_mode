@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:name1",
+ "creation": "2023-06-15 20:09:00.269542",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "founding_year",
+  "customer_care_number",
+  "headquarters"
+ ],
+ "fields": [
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "unique": 1
+  },
+  {
+   "fieldname": "founding_year",
+   "fieldtype": "Int",
+   "label": "Founding Year",
+   "non_negative": 1
+  },
+  {
+   "fieldname": "customer_care_number",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Customer Care Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "headquarters",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Headquarters",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Airplane",
+   "link_fieldname": "Name"
+  }
+ ],
+ "modified": "2023-06-16 15:09:47.075312",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Airline",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "name1",
+ "track_changes": 1,
+ "track_seen": 1,
+ "translated_doctype": 1
+}
