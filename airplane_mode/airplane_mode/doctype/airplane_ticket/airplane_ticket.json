@@ -25,10 +25,11 @@
   "column_break_ccr3q",
   "destination_airport_code",
   "departure_details_section",
-  "depart_date",
+  "departure_date",
   "column_break_gxohj",
-  "depart_time",
-  "duration"
+  "departure_time",
+  "duration",
+  "amended_from"
  ],
  "fields": [
   {
@@ -36,7 +37,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Passenger",
-   "options": "Passenger",
+   "options": "Flight Passenger",
    "reqd": 1
   },
   {
@@ -81,19 +82,6 @@
    "fieldname": "destination_airport_code",
    "fieldtype": "Read Only",
    "label": "Destination Airport Code",
-   "reqd": 1
-  },
-  {
-   "fieldname": "depart_date",
-   "fieldtype": "Date",
-   "in_standard_filter": 1,
-   "label": "Departure Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "depart_time",
-   "fieldtype": "Time",
-   "label": "Departure Time",
    "reqd": 1
   },
   {
@@ -145,11 +133,34 @@
   {
    "fieldname": "section_break_ixaze",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "departure_date",
+   "fieldtype": "Date",
+   "in_standard_filter": 1,
+   "label": "Departure Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "departure_time",
+   "fieldtype": "Time",
+   "label": "Departure Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Airplane Ticket",
+   "print_hide": 1,
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
+ "is_submittable": 1,
  "links": [],
- "modified": "2023-06-16 17:09:49.732057",
+ "modified": "2023-06-17 12:21:28.347544",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

@@ -32,7 +32,8 @@
    "fieldname": "name1",
    "fieldtype": "Link",
    "label": "Airline",
-   "options": "Airline"
+   "options": "Airline",
+   "reqd": 1
   }
  ],
  "index_web_pages_for_search": 1,
@@ -42,7 +43,7 @@
    "link_fieldname": "name1"
   }
  ],
- "modified": "2023-06-16 15:46:34.423343",
+ "modified": "2023-06-17 12:02:14.411950",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",

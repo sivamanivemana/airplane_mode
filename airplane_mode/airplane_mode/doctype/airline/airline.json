@@ -2,25 +2,18 @@
  "actions": [],
  "allow_import": 1,
  "allow_rename": 1,
- "autoname": "field:name1",
+ "autoname": "prompt",
  "creation": "2023-06-15 20:09:00.269542",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "name1",
   "founding_year",
   "customer_care_number",
   "headquarters"
  ],
  "fields": [
-  {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "Name",
-   "unique": 1
-  },
   {
    "fieldname": "founding_year",
    "fieldtype": "Int",
@@ -49,11 +42,11 @@
    "link_fieldname": "Name"
   }
  ],
- "modified": "2023-06-16 17:10:45.442784",
+ "modified": "2023-06-17 12:01:03.911092",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
- "naming_rule": "By fieldname",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {
@@ -69,12 +62,9 @@
    "write": 1
   }
  ],
- "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
- "title_field": "name1",
  "track_changes": 1,
- "track_seen": 1,
- "translated_doctype": 1
+ "track_seen": 1
 }
