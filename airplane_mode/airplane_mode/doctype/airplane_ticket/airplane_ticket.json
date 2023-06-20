@@ -12,6 +12,7 @@
   "passenger",
   "status",
   "column_break_8dxxc",
+  "currency",
   "flight",
   "seat",
   "from_to_section",
@@ -138,6 +139,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "default": "0",
    "fieldname": "ticket_price",
    "fieldtype": "Currency",
    "label": "Ticket Price",
@@ -159,12 +161,18 @@
    "fieldname": "seat",
    "fieldtype": "Read Only",
    "label": "Seat"
+  },
+  {
+   "fieldname": "currency",
+   "fieldtype": "Read Only",
+   "label": "Currency",
+   "options": "INR"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-06-20 16:29:01.488942",
+ "modified": "2023-06-20 17:46:24.530617",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

@@ -20,7 +20,7 @@ class AirplaneTicket(Document):
         total_add_ons += add_on.amount 
         
         
-    self.total_amount = self.ticket_price + total_add_ons
+    self.total_amount = int(self.ticket_price) + total_add_ons
             
  
      
