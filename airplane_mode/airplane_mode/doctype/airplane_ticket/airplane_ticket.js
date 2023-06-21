@@ -1,27 +1,57 @@
 // Copyright (c) 2023, Rohit and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on('Airplane Ticket Add-on Item', {
-	item: function(frm) {
+// frappe.ui.form.on('Airplane Ticket', {
+// 	after_save: function(frm) {
+// 		frappe.call({
+// 			method: "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.remove_duplicates",
+// 			args : {
+// 				name:frm.doc.name,
+// 			},
+// 		})
+// 		.then((response) => {
+// 			response.message.forEach(row_index =>{
+// 				cur_frm.get_field("add_ons").grid.grid_rows[row_index].remove();
+// 			});
+// 			cur_frm.refresh();
+// 		})
+// 	 }
+// });
 
-		var tbl = frm.doc.add_ons || [];
-		var i = tbl.length - 1;
-		const last_element = tbl[i].item
-		console.log(last_element)
-		while (i--)
-		{
-	
-			if(tbl[i].item == last_element)
-				{
-					cur_frm.get_field("add_ons").grid.grid_rows[i].remove();
-					frappe.throw("Please add unique items only in add-ons")
-				}
+
+
+
+
+
+
+
+
+
+
+
+
+
+// frappe.ui.form.on('Airplane Ticket Add-on Item', {
+// 	item: function(frm) {
+
+// 		var tbl = frm.doc.add_ons || [];
+// 		var i = tbl.length - 1;
+// 		const last_element = tbl[i].item
+// 		console.log(last_element)
+// 		while (i--)
+// 		{
+// 			console.log(i)
+// 			if(tbl[i].item == last_element)
+// 				{
+// 					cur_frm.get_field("add_ons").grid.grid_rows[i].remove();
+// 					// frappe.throw("Please add unique items only in add-ons")
+// 				}
 			
-			cur_frm.refresh();
+// 			cur_frm.refresh();
 	
-			}
-		   }
-		});
+// 			}
+// 		   }
+// 		});
 
 
 
