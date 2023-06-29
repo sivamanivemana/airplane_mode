@@ -4,18 +4,18 @@
 import frappe
 from frappe.model.document import Document
 
+
 class Airplane(Document):
-	pass
+    pass
 
 
 @frappe.whitelist()
-
 def user_role():
-    
+
     user = frappe.get_roles(frappe.session.user)
-    
+
     if not "Airport Authority Personnel" in user:
         return False
-        
+
     else:
         return True

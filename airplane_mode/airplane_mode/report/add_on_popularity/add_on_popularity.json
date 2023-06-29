@@ -1,6 +1,20 @@
 {
  "add_total_row": 0,
- "columns": [],
+ "columns": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "label": "Add-on Type",
+   "options": "Airplane Ticket Add-on Item",
+   "width": 0
+  },
+  {
+   "fieldname": "sold_out",
+   "fieldtype": "Int",
+   "label": "Sold Out",
+   "width": 0
+  }
+ ],
  "creation": "2023-06-29 14:42:41.713648",
  "disable_prepared_report": 0,
  "disabled": 0,
@@ -9,13 +23,13 @@
  "filters": [],
  "idx": 0,
  "is_standard": "Yes",
- "modified": "2023-06-29 15:42:45.823537",
+ "modified": "2023-06-29 22:39:44.215894",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Add-on Popularity",
  "owner": "Administrator",
  "prepared_report": 0,
- "query": "SELECT item, COUNT(*) as Sold_Count\nFROM `tabAirplane Ticket Add-on Item`\nGROUP BY item;",
+ "query": "SELECT item , COUNT(*)\nFROM `tabAirplane Ticket Add-on Item`\nGROUP BY item;",
  "ref_doctype": "Airplane Ticket",
  "report_name": "Add-on Popularity",
  "report_type": "Query Report",
