@@ -10,8 +10,7 @@
   "model",
   "name1",
   "capacity",
-  "is_published",
-  "route"
+  "initial_audit_completed"
  ],
  "fields": [
   {
@@ -39,27 +38,19 @@
   },
   {
    "default": "0",
-   "fieldname": "is_published",
+   "fieldname": "initial_audit_completed",
    "fieldtype": "Check",
-   "label": "Is Published?"
-  },
-  {
-   "fieldname": "route",
-   "fieldtype": "Data",
-   "label": "Route",
-   "reqd": 1
+   "label": "Initial Audit Completed"
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
- "is_published_field": "is_published",
  "links": [
   {
    "link_doctype": "Airline",
    "link_fieldname": "name1"
   }
  ],
- "modified": "2023-06-20 15:24:43.540783",
+ "modified": "2023-06-29 18:20:17.198636",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",
@@ -77,9 +68,62 @@
    "role": "System Manager",
    "share": 1,
    "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Fleet Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Travel Agent",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Airport Authority Personnel",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Flight Crew Member",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Gym Member",
+   "share": 1,
+   "write": 1
   }
  ],
- "route": "airplanes",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],

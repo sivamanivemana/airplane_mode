@@ -1,22 +1,51 @@
 // Copyright (c) 2023, Rohit and contributors
 // For license information, please see license.txt
 
-// frappe.ui.form.on('Airplane Ticket', {
-// 	after_save: function(frm) {
-// 		frappe.call({
-// 			method: "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.remove_duplicates",
-// 			args : {
-// 				name:frm.doc.name,
-// 			},
-// 		})
-// 		.then((response) => {
-// 			response.message.forEach(row_index =>{
-// 				cur_frm.get_field("add_ons").grid.grid_rows[row_index].remove();
-// 			});
-// 			cur_frm.refresh();
-// 		})
-// 	 }
-// });
+frappe.ui.form.on('Airplane Ticket', {
+	refresh: function(frm) {
+		frm.add_custom_button('Assign Seat',() => { 
+			let d = new frappe.ui.Dialog({
+				title: 'Assign Seat Number',
+				fields: [
+					{
+						label: 'Seat',
+						fieldname: 'seat',
+						fieldtype: 'Data'
+					},
+				],
+				size: 'small', // small, large, extra-large 
+				primary_action_label: 'Assign',
+				primary_action(values) {
+					frm.set_value('seat', values['seat']);
+					d.hide();
+					frm.save();
+				}
+			});
+			
+			d.show();
+		}, 'Action')
+	},
+
+	flight: function(frm) {
+		
+		frappe.call({
+			method: "airplane_mode.airplane_mode.doctype.airplane_ticket.airplane_ticket.ticket_validations", 
+			args : {
+				flight : frm.doc.flight
+			},
+		})
+		.then((r) =>{
+
+			if (frm.doc.name.slice(0, -15) != frm.doc.flight){
+
+				if (r.message[0] === r.message[1]){
+					frappe.throw("All Seats are reserved for this Flight")
+				}
+			}
+		})
+	}
+
+});
 
 
 
