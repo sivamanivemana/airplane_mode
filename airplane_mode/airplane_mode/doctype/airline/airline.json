@@ -13,7 +13,7 @@
   "founding_year",
   "customer_care_number",
   "headquarters",
-  "route"
+  "website"
  ],
  "fields": [
   {
@@ -37,14 +37,12 @@
    "reqd": 1
   },
   {
-   "fieldname": "route",
+   "fieldname": "website",
    "fieldtype": "Data",
    "label": "Website",
-   "options": "URL",
-   "reqd": 1
+   "options": "URL"
   }
  ],
- "has_web_view": 1,
  "index_web_pages_for_search": 1,
  "links": [
   {
@@ -52,7 +50,7 @@
    "link_fieldname": "Name"
   }
  ],
- "modified": "2023-06-29 17:44:39.145606",
+ "modified": "2023-06-30 14:46:32.798762",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airline",
