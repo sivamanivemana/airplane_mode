@@ -1,0 +1,12 @@
+
+
+<div>
+	<div class="card mb-1" style="width: 18rem;">
+		<div class="card-body">
+		  <h5 class="card-title" style="font-weight:bold; font-size: 30px">{{ doc.airline }}</h5>
+		  <h6 class="card-subtitle mb-2 text-muted">{{doc.source_airport_code}} ---> {{doc.destination_airport_code}}</h6>
+		  <p class="card-text">{{frappe.utils.format_date(doc.date_of_departure, "d MMMM, YYYY")}} | {{doc.time_of_departure}} | {{frappe.utils.format_duration(doc.duration)}}</p>
+		  <a href="{{ doc.route }}" class="card-link">View Flight</a>
+		</div>
+	</div>
+</div>
