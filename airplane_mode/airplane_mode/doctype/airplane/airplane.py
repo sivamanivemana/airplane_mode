@@ -6,16 +6,23 @@ from frappe.model.document import Document
 
 
 class Airplane(Document):
-    pass
+
+    @frappe.whitelist()
+    def user_role(self):
+
+        user = frappe.get_roles(frappe.session.user)
+        
+        if not "Airport Authority Personnel" in user:
+            return False
+
+        else:
+            return True
 
 
-@frappe.whitelist()
-def user_role():
+		# cur_frm.layout.primary_button.css('color', 'black')
 
-    user = frappe.get_roles(frappe.session.user)
+		# cur_frm.layout.primary_button.removeClass("btn-primary")
 
-    if not "Airport Authority Personnel" in user:
-        return False
+		# cur_frm.layout.primary_button.addClass("btn-secondary")
 
-    else:
-        return True
+		# cur_frm.fields.at(7).input_area.firstChild.children[1].remove()

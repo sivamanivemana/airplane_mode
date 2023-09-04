@@ -10,7 +10,9 @@
   "model",
   "name1",
   "capacity",
-  "initial_audit_completed"
+  "initial_audit_completed",
+  "image",
+  "jpg"
  ],
  "fields": [
   {
@@ -41,6 +43,17 @@
    "fieldname": "initial_audit_completed",
    "fieldtype": "Check",
    "label": "Initial Audit Completed"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "label": "Image"
+  },
+  {
+   "fieldname": "jpg",
+   "fieldtype": "Attach Image",
+   "label": "JPG",
+   "length": 6
   }
  ],
  "index_web_pages_for_search": 1,
@@ -50,7 +63,7 @@
    "link_fieldname": "name1"
   }
  ],
- "modified": "2023-06-29 22:45:08.308309",
+ "modified": "2023-08-10 21:06:25.359338",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane",
